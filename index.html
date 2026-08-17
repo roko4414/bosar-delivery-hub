@@ -850,6 +850,82 @@
     color: var(--ink-2);
   }
 
+  .sla {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sla li {
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--indigo);
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 13px 15px;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 14px;
+    align-items: baseline;
+  }
+
+  @media (max-width: 640px) {
+    .sla li { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  }
+
+  .sla b {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--indigo);
+  }
+
+  .sla span {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  .tablewrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+
+  .tablewrap table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  .tablewrap th,
+  .tablewrap td {
+    text-align: left;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .tablewrap th {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: var(--surface-2);
+    white-space: nowrap;
+  }
+
+  .tablewrap td { color: var(--ink-2); line-height: 1.5; }
+  .tablewrap td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .tablewrap tr:last-child td { border-bottom: 0; }
+
   .loop {
     border: 1px solid var(--line);
     border-left: 3px solid var(--cyan);
@@ -1475,13 +1551,13 @@
 
     <div class="meter">
       <div class="meter-main">
-        <div class="meter-label"><span>Loaded</span><b>4 / 5</b></div>
-        <div class="track"><i style="width: 80%;"></i></div>
+        <div class="meter-label"><span>Loaded</span><b>5 / 5</b></div>
+        <div class="track"><i style="width: 100%;"></i></div>
       </div>
       <div class="meter-stats">
         <div><b>3</b>Creative</div>
         <div><b>1</b>VSL</div>
-        <div><b>0</b>SOP</div>
+        <div><b>1</b>SOP</div>
       </div>
     </div>
 
@@ -1510,13 +1586,13 @@
     <nav class="rail" aria-label="Deliverable index">
 
       <div class="panel">
-        <div class="panel-head"><span>This round</span><span>4 / 5</span></div>
+        <div class="panel-head"><span>This round</span><span>5 / 5</span></div>
         <ol>
-          <li><a href="#c01"><span class="chip">C1</span>Don't start where they say<span class="dot draft"></span></a></li>
-          <li><a href="#c02"><span class="chip">C2</span>A third we say no to<span class="dot draft"></span></a></li>
-          <li><a href="#c03"><span class="chip">C3</span>Nine hundred fifty-eight k<span class="dot draft"></span></a></li>
+          <li><a href="#c01"><span class="chip">C1</span>Don't start where they say<span class="dot ready"></span></a></li>
+          <li><a href="#c02"><span class="chip">C2</span>A third we say no to<span class="dot ready"></span></a></li>
+          <li><a href="#c03"><span class="chip">C3</span>Nine hundred fifty-eight k<span class="dot ready"></span></a></li>
           <li><a href="#vsl"><span class="chip">VSL</span>VSL intro, variant B<span class="dot ready"></span></a></li>
-          <li><a href="#sop"><span class="chip">SOP</span>Speed-to-lead SOP<span class="dot"></span></a></li>
+          <li><a href="#sop"><span class="chip">SOP</span>Speed-to-lead SOP<span class="dot draft"></span></a></li>
         </ol>
       </div>
 
@@ -1549,7 +1625,7 @@
 
       <div class="section-head">
         <h2>This round</h2>
-        <span>4 of 5 loaded</span>
+        <span>5 of 5 loaded</span>
       </div>
 
       <div class="localbar">
@@ -1565,12 +1641,12 @@
 
       <div class="stack" id="videos">
 
-        <article class="card filled" id="c01" data-status="draft">
+        <article class="card filled" id="c01" data-status="ready">
           <div class="card-top">
             <span class="slot">C1</span>
             <h3>Don't start where everyone tells you to start</h3>
             <div class="meta"><span>Creative 1, v2</span><span>Walking talking head</span><span>60s</span><span>Bo</span></div>
-            <span class="pill draft">Draft</span>
+            <span class="pill ready">Ready to record</span>
           </div>
           <div class="doc">
 
@@ -1674,12 +1750,12 @@
           </div>
         </article>
 
-        <article class="card filled" id="c02" data-status="draft">
+        <article class="card filled" id="c02" data-status="ready">
           <div class="card-top">
             <span class="slot">C2</span>
             <h3>A third of what you ask for, we say no to</h3>
             <div class="meta"><span>Creative 2</span><span>Seated, static</span><span>50 to 55s</span><span>Bo</span></div>
-            <span class="pill draft">Draft</span>
+            <span class="pill ready">Ready to record</span>
           </div>
           <div class="doc">
 
@@ -1783,12 +1859,12 @@
           </div>
         </article>
 
-        <article class="card filled" id="c03" data-status="draft">
+        <article class="card filled" id="c03" data-status="ready">
           <div class="card-top">
             <span class="slot">C3</span>
             <h3>Nine hundred and fifty-eight thousand</h3>
             <div class="meta"><span>Creative 3, v2</span><span>Podcast, four questions</span><span>~65s</span><span>Bo + VO</span></div>
-            <span class="pill draft">Draft</span>
+            <span class="pill ready">Ready to record</span>
           </div>
           <div class="doc">
 
@@ -1991,17 +2067,128 @@
           </div>
         </article>
 
-        <article class="card" id="sop" data-status="pending">
+        <article class="card filled" id="sop" data-status="draft">
           <div class="card-top">
             <span class="slot">SOP</span>
             <h3>Speed-to-lead SOP</h3>
-            <div class="meta"><span>Referenced in the agreement</span><span>Awaiting your comments</span></div>
-            <span class="pill pending">Awaiting</span>
+            <div class="meta"><span>v1, for your comments</span><span>Referenced in the agreement</span><span>5 commitments</span></div>
+            <span class="pill draft">Draft</span>
           </div>
-          <div class="await">
-            Slot reserved. This one gets referenced in the agreement, so it needs to say what happens
-            <code>within how many minutes</code><code>by which channel</code><code>who owns it</code><code>what happens if they miss it</code>
-            rather than describing good intentions. Send the current draft or the agreement clause and I'll write it against that.
+          <div class="doc">
+
+            <p class="changenote">
+              Written to be referenced in the agreement, so every line is something you can either point at
+              in a log or fail. No good intentions, no "promptly", no "where possible". Five commitments, one
+              table that proves they happened, and one consequence if they don't.
+            </p>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>1</b>
+                <strong>Why it's in the agreement</strong>
+                <em>The numbers, not the principle.</em>
+              </div>
+              <div class="sec-body">
+                <p>Responding inside 5 minutes makes contact roughly 100 times more likely, and qualification 21 times more likely, than waiting 30 minutes. That gap is the single biggest lever on this funnel and it costs nothing to pull.</p>
+                <p>On this funnel as it currently runs, 70% of the leads that booked in were never called inside the first 5 minutes.</p>
+                <p>Because paid media is bought against qualified calls that actually held, the speed of the first response decides the number at the end of the month. So it's written down rather than assumed.</p>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>2</b>
+                <strong>Scope and owner</strong>
+                <em>Who this binds.</em>
+              </div>
+              <div class="sec-body">
+                <p>Applies to every inbound lead that books on this funnel, from the moment the booking lands.</p>
+                <p>Owned by the person taking and closing the calls. One named owner, not "the team", so there's never a question about whose job it was.</p>
+                <div class="prod"><b>To fill in</b><span>Owner's name. The SOP is unenforceable without one, because "somebody should have called" is not a thing you can review.</span></div>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>3</b>
+                <strong>The five commitments</strong>
+                <em>Each one is pass or fail on a given lead.</em>
+              </div>
+              <div class="sec-body">
+                <ol class="sla">
+                  <li><b>Within 5 minutes</b><span>First call attempt, for any booking that lands during AU business hours. Measured from the booking timestamp, not from when anyone noticed it.</span></li>
+                  <li><b>Within 30 min of 9am</b><span>For bookings that come in overnight. The clock starts at 9am, not at the booking.</span></li>
+                  <li><b>1 to 2 hours before</b><span>Voice memo to the lead ahead of their scheduled call. Not a text, a voice memo.</span></li>
+                  <li><b>3 attempts in 24 hours</b><span>Callbacks on a no-show. Three separate attempts, all inside 24 hours of the missed call.</span></li>
+                  <li><b>Recorded</b><span>The first attempt, the one inside the 5 minutes, is recorded and stored against the lead.</span></li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>4</b>
+                <strong>What gets logged</strong>
+                <em>One row per lead, filled as it happens.</em>
+              </div>
+              <div class="sec-body">
+                <p>A shared table, visible to both sides, with one row per booked lead. Filled in as it happens rather than reconstructed later.</p>
+                <div class="tablewrap">
+                  <table>
+                    <thead>
+                      <tr><th>Column</th><th>What goes in it</th><th>Proves</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Lead</td><td>Name and contact number</td><td>Which lead this row is about</td></tr>
+                      <tr><td>Booked at</td><td>Timestamp the booking landed</td><td>Starts the clock</td></tr>
+                      <tr><td>First attempt at</td><td>Timestamp of the first call attempt</td><td>Commitment 1 and 2</td></tr>
+                      <tr><td>Time to first attempt</td><td>Minutes, calculated from the two above</td><td>Pass or fail at a glance</td></tr>
+                      <tr><td>Recording</td><td>Link to the first-attempt recording</td><td>Commitment 5</td></tr>
+                      <tr><td>Voice memo at</td><td>Timestamp the memo was sent</td><td>Commitment 3</td></tr>
+                      <tr><td>Showed</td><td>Yes or no</td><td>Whether the call held</td></tr>
+                      <tr><td>Callbacks 1, 2, 3</td><td>Three timestamps, or blank</td><td>Commitment 4</td></tr>
+                      <tr><td>Qualified</td><td>Yes or no, against the $1M and 10-staff filter</td><td>What gets paid on</td></tr>
+                      <tr><td>Notes</td><td>Anything unusual, wrong number, hung up, rebooked</td><td>Context for edge cases</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>5</b>
+                <strong>If a commitment is missed</strong>
+                <em>The consequence, stated once.</em>
+              </div>
+              <div class="sec-body">
+                <p>If any of the five commitments is missed on a given lead, that lead counts as a qualified call regardless of whether they showed up.</p>
+                <p>The reasoning is simple. Paid media controls whether a qualified person books. It doesn't control whether anyone rings them. If all five commitments are met and the lead still doesn't show, that's a lead that didn't convert and nobody gets paid for it. If they weren't met, the outcome can't be attributed to the lead.</p>
+                <div class="proof">
+                  <b>Two exceptions</b>
+                  <span>Wrong or fake contact numbers don't count against the SLA, since there's nothing to call. And a qualified lead who no-shows but turns up to a later call counts as held, whenever that happens.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>6</b>
+                <strong>Nurture after the first attempt</strong>
+                <em>The one part still open.</em>
+              </div>
+              <div class="sec-body">
+                <p>The five commitments above cover the first contact and the no-show recovery. What happens after that, the ongoing follow-up on leads who go quiet, isn't specified yet because it depends on whether there's already a sequence running.</p>
+                <div class="prod"><b>Question for you</b><span>Is there a follow-up sequence after the first attempt today? If there isn't, the APG sequence can be handed over and replicated here, and this section gets written against it.</span></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="actions">
+            <button type="button" class="act done" data-act="recorded" aria-pressed="false">Mark done</button>
+            <button type="button" class="act revise" data-act="reshoot" aria-pressed="false">Needs revision</button>
+            <span class="spacer"></span>
+            <span class="act-note" data-act-note></span>
           </div>
         </article>
 
@@ -2048,28 +2235,6 @@
       </div>
     </section>
 
-    <section>
-      <h5>The four questions</h5>
-      <p>Each one asked in voiceover with the question on screen, then answered. These are the only text on screen.</p>
-      <div class="screencards">
-        <div class="shot">
-          <div class="shot-frame"><b>What's the most money you've ever found one of them wasting?</b></div>
-          <em>Q1 · 0 — 7s</em>
-        </div>
-        <div class="shot">
-          <div class="shot-frame"><b>How does a business lose nearly a million dollars and not notice?</b></div>
-          <em>Q2 · 14 — 18s</em>
-        </div>
-        <div class="shot">
-          <div class="shot-frame"><b>So how do you actually find it?</b></div>
-          <em>Q3 · 35 — 39s</em>
-        </div>
-        <div class="shot">
-          <div class="shot-frame"><b>And if you don't find anything?</b></div>
-          <em>Q4 · 53 — 56s</em>
-        </div>
-      </div>
-    </section>
 
     <section>
       <h5>Pacing</h5>
@@ -2151,16 +2316,6 @@
       </div>
     </section>
 
-    <section>
-      <h5>On-screen text</h5>
-      <p>One card, three seconds. Nothing else for the rest of it.</p>
-      <div class="screencards">
-        <div class="shot">
-          <div class="shot-frame"><b>Bo [surname]<br>Founder</b></div>
-          <em>0 — 3s only</em>
-        </div>
-      </div>
-    </section>
 
   </div>
 </dialog>
@@ -2215,16 +2370,6 @@
       </div>
     </section>
 
-    <section>
-      <h5>On-screen text</h5>
-      <p>One card, three seconds, and nothing else on screen for the remaining fifty-seven.</p>
-      <div class="screencards">
-        <div class="shot">
-          <div class="shot-frame"><b>Bo [surname]<br>Founder</b></div>
-          <em>0 — 3s only</em>
-        </div>
-      </div>
-    </section>
 
   </div>
 </dialog>
