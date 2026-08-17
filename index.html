@@ -850,6 +850,34 @@
     color: var(--ink-2);
   }
 
+  .loop {
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--cyan);
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: 0 0 14px;
+    max-width: none;
+  }
+
+  .loop b {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 6px;
+  }
+
+  .loop span {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--ink-2);
+  }
+
   .screen {
     border: 1px solid var(--line);
     border-left: 3px solid var(--indigo);
@@ -1447,11 +1475,11 @@
 
     <div class="meter">
       <div class="meter-main">
-        <div class="meter-label"><span>Loaded</span><b>2 / 3</b></div>
-        <div class="track"><i style="width: 66.7%;"></i></div>
+        <div class="meter-label"><span>Loaded</span><b>3 / 4</b></div>
+        <div class="track"><i style="width: 75%;"></i></div>
       </div>
       <div class="meter-stats">
-        <div><b>1</b>Creative</div>
+        <div><b>2</b>Creative</div>
         <div><b>1</b>VSL</div>
         <div><b>0</b>SOP</div>
       </div>
@@ -1482,11 +1510,12 @@
     <nav class="rail" aria-label="Deliverable index">
 
       <div class="panel">
-        <div class="panel-head"><span>This round</span><span>2 / 3</span></div>
+        <div class="panel-head"><span>This round</span><span>3 / 4</span></div>
         <ol>
-          <li><a href="#d01"><span class="chip">01</span>Don't start where they say<span class="dot draft"></span></a></li>
-          <li><a href="#d02"><span class="chip">02</span>VSL intro, variant B<span class="dot ready"></span></a></li>
-          <li><a href="#d03"><span class="chip">03</span>Speed-to-lead SOP<span class="dot"></span></a></li>
+          <li><a href="#c01"><span class="chip">C1</span>Don't start where they say<span class="dot draft"></span></a></li>
+          <li><a href="#c02"><span class="chip">C2</span>A third we say no to<span class="dot draft"></span></a></li>
+          <li><a href="#vsl"><span class="chip">VSL</span>VSL intro, variant B<span class="dot ready"></span></a></li>
+          <li><a href="#sop"><span class="chip">SOP</span>Speed-to-lead SOP<span class="dot"></span></a></li>
         </ol>
       </div>
 
@@ -1519,7 +1548,7 @@
 
       <div class="section-head">
         <h2>This round</h2>
-        <span>2 of 3 loaded</span>
+        <span>3 of 4 loaded</span>
       </div>
 
       <div class="localbar">
@@ -1535,9 +1564,9 @@
 
       <div class="stack" id="videos">
 
-        <article class="card filled" id="d01" data-status="draft">
+        <article class="card filled" id="c01" data-status="draft">
           <div class="card-top">
-            <span class="slot">01</span>
+            <span class="slot">C1</span>
             <h3>Don't start where everyone tells you to start</h3>
             <div class="meta"><span>Creative 1, v2</span><span>Walking talking head</span><span>60s</span><span>Bo</span></div>
             <span class="pill draft">Draft</span>
@@ -1554,7 +1583,7 @@
             </p>
 
             <p style="margin:0;">
-              <button type="button" class="refbtn" data-ref-open="ref-d01">See how it should look</button>
+              <button type="button" class="refbtn" data-ref-open="ref-c01">See how it should look</button>
             </p>
 
             <div class="sec" id="c1">
@@ -1644,9 +1673,118 @@
           </div>
         </article>
 
-        <article class="card filled" id="d02" data-status="ready">
+        <article class="card filled" id="c02" data-status="draft">
           <div class="card-top">
-            <span class="slot">02</span>
+            <span class="slot">C2</span>
+            <h3>A third of what you ask for, we say no to</h3>
+            <div class="meta"><span>Creative 2</span><span>Seated, static</span><span>50 to 55s</span><span>Bo</span></div>
+            <span class="pill draft">Draft</span>
+          </div>
+          <div class="doc">
+
+            <p class="changenote">
+              The confession. A company that sells AI telling you where not to use it, and the reason that
+              makes the rest of the list worth anything. Runs on the against-interest turn: every other
+              consultant gets paid the same whether it works or not, so their answer is always yes.
+              <br><br>
+              Format is the opposite of Creative 1. Seated, static frame, tight on the face, no movement at
+              all. The stillness is the contrast, so nothing about this one should be busy.
+            </p>
+
+            <p style="margin:0;">
+              <button type="button" class="refbtn" data-ref-open="ref-c02">See how it should look</button>
+            </p>
+
+            <div class="loop">
+              <b>Macro loop</b>
+              <span>Why would a company that sells AI tell you not to use AI? Opens at 4 seconds, pays off at 33. Everything between those two points is the loop staying open.</span>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>0 — 7s</b>
+                <strong>Hook</strong>
+                <em>Page already face-down on the desk.</em>
+              </div>
+              <div class="sec-body">
+                <p>"About a third of what businesses ask us to automate with AI, we tell them not to."</p>
+                <p class="cue">beat</p>
+                <p>"In writing. In the report. With the reasons next to it."</p>
+                <p class="cue">On screen: Bo [surname], founder — 3 seconds only</p>
+                <div class="loop"><b>Loop opens</b><span>Why would you turn down the work? And what's in that third?</span></div>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>7 — 18s</b>
+                <strong>Act 1, the villain</strong>
+                <em>Names the incentive, not the people.</em>
+              </div>
+              <div class="sec-body">
+                <p>"Nobody else in this industry does that, and there's a reason for it."</p>
+                <p>"Every consultant, every tool company, every freelancer you've spoken to gets paid the same whether it works or not. So the answer's always yes. Yes we can automate that. Yes, AI does that."</p>
+                <p class="cue">beat</p>
+                <p>"Of course it's yes. It costs them nothing to be wrong."</p>
+                <div class="loop"><b>Loop state</b><span>Closes "why doesn't anyone else do it". Leaves "so what's in the third?" still open.</span></div>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>18 — 33s</b>
+                <strong>Act 2, pay off the third</strong>
+                <em>Flip the page over at 25s.</em>
+              </div>
+              <div class="sec-body">
+                <p>"And here's what's in that third."</p>
+                <p>"The places your data isn't good enough yet, so AI would be confidently wrong and nobody would catch it. The decisions that need a person staying in the loop, because somebody has to be accountable when it goes sideways. And the sensitive data your AI should never touch."</p>
+                <p class="cue">beat, turns the page around to camera</p>
+                <div class="screen"><b>Cut-in</b><span>The real page, redacted, on screen for 3 to 4 seconds.</span></div>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>33 — 45s</b>
+                <strong>Act 3, the turn</strong>
+                <em>This is the line that sells.</em>
+              </div>
+              <div class="sec-body">
+                <p>"Now have a think about what that means for the other two-thirds."</p>
+                <p class="cue">beat</p>
+                <p>"By the time we tell you something's worth building, we've already told you what isn't."</p>
+                <p>"That's the only reason the list is worth anything."</p>
+                <div class="loop"><b>Macro loop closes</b><span>The answer to "why turn down the work" arrives here, and it isn't modesty. Saying no to a third is what makes the other two-thirds credible.</span></div>
+              </div>
+            </div>
+
+            <div class="sec">
+              <div class="sec-label">
+                <b>45 — 55s</b>
+                <strong>The AI audit + CTA</strong>
+                <em>Offer, guarantee, click.</em>
+              </div>
+              <div class="sec-body">
+                <p>"And that's part of the AI audit. We map your whole business, count what the manual work is actually costing you in dollars a year, then tell you what to build, in what order, and what to leave alone."</p>
+                <p>"If we don't find at least three times what it costs in wasted money, you don't pay and you keep the lot."</p>
+                <p>"So click learn more and I'll show you what's worth automating and what is too big of a risk."</p>
+                <div class="loop"><b>CTA loop</b><span>What's actually on the page? Nothing in the ad closes that. Only the click does.</span></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="actions">
+            <button type="button" class="act done" data-act="recorded" aria-pressed="false">Mark done</button>
+            <button type="button" class="act revise" data-act="reshoot" aria-pressed="false">Needs revision</button>
+            <span class="spacer"></span>
+            <span class="act-note" data-act-note></span>
+          </div>
+        </article>
+
+        <article class="card filled" id="vsl" data-status="ready">
+          <div class="card-top">
+            <span class="slot">VSL</span>
             <h3>VSL intro to record, variant B</h3>
             <div class="meta"><span>Section 1, hook</span><span>~300 words</span><span>5 beats</span></div>
             <span class="pill ready">Ready to record</span>
@@ -1750,9 +1888,9 @@
           </div>
         </article>
 
-        <article class="card" id="d03" data-status="pending">
+        <article class="card" id="sop" data-status="pending">
           <div class="card-top">
-            <span class="slot">03</span>
+            <span class="slot">SOP</span>
             <h3>Speed-to-lead SOP</h3>
             <div class="meta"><span>Referenced in the agreement</span><span>Awaiting your comments</span></div>
             <span class="pill pending">Awaiting</span>
@@ -1770,10 +1908,69 @@
   </div>
 </div>
 
-<dialog class="refmodal" id="ref-d01" aria-labelledby="ref-d01-title">
+<dialog class="refmodal" id="ref-c02" aria-labelledby="ref-c02-title">
   <div class="ref-head">
-    <span class="slot">01</span>
-    <h4 id="ref-d01-title">How the creative should look</h4>
+    <span class="slot">C2</span>
+    <h4 id="ref-c02-title">How the creative should look</h4>
+    <button type="button" class="ref-close" data-ref-close aria-label="Close">&#215;</button>
+  </div>
+  <div class="ref-body">
+
+    <section>
+      <h5>The setup</h5>
+      <p>Seated, indoors, static frame, tight on the face. The exact opposite of Creative 1.</p>
+      <div class="refslot">
+        <b>Reference not loaded yet</b>
+        <span>Send a framing reference and it appears here. The link stays the same, so nothing needs re-sending.</span>
+      </div>
+    </section>
+
+    <section>
+      <h5>Stillness is the point</h5>
+      <div class="prod">
+        <b>No movement at all</b>
+        <span>No walking, no handheld drift, no reframing. Creative 1 is a man walking down a street. This one is a man sitting still telling you something against his own interest, and the stillness is what makes it read that way.</span>
+      </div>
+      <div class="prod">
+        <b>Tight on the face</b>
+        <span>Closer than Creative 1. The whole ad is a confession, so there's nothing else worth looking at.</span>
+      </div>
+    </section>
+
+    <section>
+      <h5>The visual loop</h5>
+      <div class="screen">
+        <b>From frame one</b>
+        <span>A single printed page, face-down on the desk. Never mentioned, never explained. It just sits there.</span>
+      </div>
+      <div class="screen">
+        <b>At 25s</b>
+        <span>Flipped over, mid-way through the list of what's in the rejected third. He turns it around to camera on the beat after.</span>
+      </div>
+      <div class="screen">
+        <b>Cut-in, 3 to 4 seconds</b>
+        <span>The real page, redacted. This is the one asset the ad needs that isn't Bo and a chair.</span>
+      </div>
+    </section>
+
+    <section>
+      <h5>On-screen text</h5>
+      <p>One card, three seconds. Nothing else for the rest of it.</p>
+      <div class="screencards">
+        <div class="shot">
+          <div class="shot-frame"><b>Bo [surname]<br>Founder</b></div>
+          <em>0 — 3s only</em>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</dialog>
+
+<dialog class="refmodal" id="ref-c01" aria-labelledby="ref-c01-title">
+  <div class="ref-head">
+    <span class="slot">C1</span>
+    <h4 id="ref-c01-title">How the creative should look</h4>
     <button type="button" class="ref-close" data-ref-close aria-label="Close">&#215;</button>
   </div>
   <div class="ref-body">
